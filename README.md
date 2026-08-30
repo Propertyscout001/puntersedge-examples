@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.svg">
+  <img alt="PuntersEdge API" src="docs/logo-light.svg" width="400">
+</picture>
+
 # PuntersEdge API examples — Australian racing & sports odds in Python
 
 Six small, runnable scripts against the [PuntersEdge Odds API](https://puntersedge.online/api?utm_source=github_examples&utm_medium=cookbook_readme):
