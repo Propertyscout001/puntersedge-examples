@@ -44,6 +44,35 @@ export PUNTERSEDGE_API_KEY=your_key_here
 \* measured against production on 2026-08-30. Your `/v1/usage` endpoint and the
 `X-Credits-*` response headers always show the live numbers.
 
+## Notebook: a month of Australian racing closing lines
+
+[`notebooks/closing-lines-clv.ipynb`](notebooks/closing-lines-clv.ipynb) walks the closing-line
+archive end to end, with the outputs committed so it reads without a key:
+
+1. the fixed [September 2026 edition](https://puntersedge.online/market-report/2026-09) of the
+   market report (no key) — book percentage at the jump by bookmaker, best-price share,
+   favourite strike rate by code;
+2. a week of Australian thoroughbred closing lines pulled as CSV (Standard plan and above,
+   20 credits for the call) — 27,108 rows across 264 races and 14 bookmakers in the committed run;
+3. each bookmaker's best-price share and the open-to-close movement, recomputed locally with
+   the report's own counting rule;
+4. the closing-line value of every opening price, by bookmaker;
+5. a call to `POST /v1/racing/clv` to score bets of your own (Plus and above — on a smaller
+   plan the notebook shows the 403 and the upgrade link the API returns, which is what the
+   committed run shows).
+
+![Book percentage at close by bookmaker, September 2026](docs/nb-overround.png)
+![Closing-line value of the opening price by bookmaker](docs/nb-clv-by-book.png)
+
+```
+pip install -r requirements-notebook.txt
+PUNTERSEDGE_API_KEY=your_key jupyter notebook notebooks/closing-lines-clv.ipynb
+```
+
+[Get a free key](https://puntersedge.online/api?utm_source=github_examples&utm_medium=notebook#signup)
+(no card); the archive pull needs Standard. CLV measures a price against the market's final
+view of a race, not against the result — nothing in the notebook is a betting strategy.
+
 ## Credit budgeting, honestly
 
 The free tier is 1,500 credits/month. That is roughly **750 next-to-go calls** —
