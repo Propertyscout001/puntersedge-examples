@@ -5,10 +5,10 @@
 
 # PuntersEdge API examples — Australian racing & sports odds in Python
 
-Six small, runnable scripts against the [PuntersEdge Odds API](https://puntersedge.online/api?utm_source=github_examples&utm_medium=cookbook_readme):
+Seven small, runnable scripts against the [PuntersEdge Odds API](https://puntersedge.online/api?utm_source=github_examples&utm_medium=cookbook_readme):
 live win/place prices for Australian horse, greyhound and harness racing across
-[14 bookmakers, measured live](https://puntersedge.online/coverage-report.json), plus
-head-to-head sports odds.
+[14 bookmakers, measured live](https://puntersedge.online/coverage-report.json),
+British and Irish racing bookmaker by bookmaker, plus head-to-head sports odds.
 
 Each script is standalone — read it top to bottom, run it, adapt it. No framework,
 no shared helpers, no magic.
@@ -24,7 +24,7 @@ python examples/01_next_to_go.py
 
 Without a key, scripts 01 and 06 hit the keyless demo sandbox (real data, truncated).
 For the full feed, [grab a free key](https://puntersedge.online/api?utm_source=github_examples&utm_medium=cookbook_readme#signup)
-— 1,500 credits/month, no card — and:
+— 3,000 credits/month, no card — and:
 
 ```
 export PUNTERSEDGE_API_KEY=your_key_here
@@ -40,9 +40,25 @@ export PUNTERSEDGE_API_KEY=your_key_here
 | [04_results_to_csv.py](examples/04_results_to_csv.py) | settled results → CSV | `/v1/racing/results` | 2 |
 | [05_price_history_to_csv.py](examples/05_price_history_to_csv.py) | open/close/high/low per runner-book → CSV | `/v1/racing/price-history` | 5 |
 | [06_sports_best_odds.py](examples/06_sports_best_odds.py) | best head-to-head price per team (NRL, AFL, …) | `/v1/best-odds/{sport}` | 3 |
+| [07_uk_racing_card.py](examples/07_uk_racing_card.py) | British & Irish card per bookmaker in UK fractions, then results with SPs | `/v1/racing/next-to-go`, `/v1/racing/results` | 2 + 2 |
 
-\* measured against production on 2026-08-30. Your `/v1/usage` endpoint and the
+\* measured against production on 2026-08-30 (07 on 2026-10-13). Your `/v1/usage` endpoint and the
 `X-Credits-*` response headers always show the live numbers.
+
+## British and Irish racing
+
+[`07_uk_racing_card.py`](examples/07_uk_racing_card.py) prints the next British and Irish races in
+London time with every runner's price at Ladbrokes / Coral, William Hill, Betway and the Australian
+books that price UK racing, as a UK fraction wherever the decimal sits on the fractional ladder (the
+API is decimal throughout). Then the last day's results with each runner's starting price. Standard
+library only; it needs a free key. The [UK & Irish racing section](https://puntersedge.online/uk-racing-odds-api?utm_source=github_examples&utm_medium=cookbook_readme)
+covers the closing-price archive and each bookmaker in more depth, and the
+[Christmas racing page](https://puntersedge.online/uk-racing-odds-api/christmas-racing?utm_source=github_examples&utm_medium=cookbook_readme)
+lists what a King George or Welsh National build needs.
+
+```
+PUNTERSEDGE_API_KEY=your_key python examples/07_uk_racing_card.py
+```
 
 ## Notebook: a month of Australian racing closing lines
 
@@ -75,13 +91,13 @@ view of a race, not against the result — nothing in the notebook is a betting 
 
 ## Credit budgeting, honestly
 
-The free tier is 1,500 credits/month. That is roughly **750 next-to-go calls** —
+The free tier is 3,000 credits/month. That is roughly **1,500 next-to-go calls** —
 hourly polling all month with room to spare — but it is *not* enough for a
 60-second live scanner (that's ~86,000 credits/month; the Standard plan's 75,000
 credits at A$29/mo is built for that shape). Poll at the cadence your use case
 actually needs, not the fastest one that works.
 
-01 and 06 use only the Python standard library in demo mode; the keyed paths use the
+01 and 06 use only the Python standard library in demo mode, and 07 throughout; the keyed paths use the
 official [`puntersedge` SDK](https://github.com/Propertyscout001/puntersedge-python)
 (`pip install puntersedge`). 03–05 deliberately use plain `requests` so you can see
 the raw REST calls — everything here ports directly to any language.
@@ -98,6 +114,7 @@ scanners misfire, and a `puntersedge-arb` CLI.
   is recomputed from the production ingest store over a trailing 7-day window.
 - Odds data is for research and tooling. **Nothing here is betting advice, and no
   strategy shown is a claim that it makes money.**
-- 18+. Gamble responsibly — in Australia: 1800 858 858, [gamblinghelponline.org.au](https://www.gamblinghelponline.org.au).
+- 18+. Gamble responsibly — in Australia: 1800 858 858, [gamblinghelponline.org.au](https://www.gamblinghelponline.org.au);
+  in Great Britain: GamCare 0808 8020 133, [begambleaware.org](https://www.begambleaware.org); in Ireland: [gamblingcare.ie](https://www.gamblingcare.ie).
 
 MIT licensed — use it in anything.
