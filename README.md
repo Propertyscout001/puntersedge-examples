@@ -41,6 +41,7 @@ export PUNTERSEDGE_API_KEY=your_key_here
 | [05_price_history_to_csv.py](examples/05_price_history_to_csv.py) | open/close/high/low per runner-book → CSV | `/v1/racing/price-history` | 5 |
 | [06_sports_best_odds.py](examples/06_sports_best_odds.py) | best head-to-head price per team (NRL, AFL, …) | `/v1/best-odds/{sport}` | 3 |
 | [07_uk_racing_card.py](examples/07_uk_racing_card.py) | British & Irish card per bookmaker in UK fractions, then results with SPs | `/v1/racing/next-to-go`, `/v1/racing/results` | 2 + 2 |
+| [08_tip_tracker.py](examples/08_tip_tracker.py) | log a tip at the best price, then settle it against the closing price and the result: CLV and profit | `/v1/racing/next-to-go`, `/v1/racing/closing-lines` | 2–4 + 5 per tip |
 
 \* measured against production on 2026-08-30 (07 on 2026-10-13). Your `/v1/usage` endpoint and the
 `X-Credits-*` response headers always show the live numbers.
@@ -88,6 +89,31 @@ PUNTERSEDGE_API_KEY=your_key jupyter notebook notebooks/closing-lines-clv.ipynb
 [Get a free key](https://puntersedge.online/api?utm_source=github_examples&utm_medium=notebook#signup)
 (no card); the archive pull needs Standard. CLV measures a price against the market's final
 view of a race, not against the result — nothing in the notebook is a betting strategy.
+
+## Did your tips beat the closing price?
+
+[`08_tip_tracker.py`](examples/08_tip_tracker.py) is a small tip tracker: log a runner at the best
+price on offer (or the price you actually took), and after the race settle it against the best
+closing price across the books and the finishing position.
+
+```
+export PUNTERSEDGE_API_KEY=your_key
+python examples/08_tip_tracker.py next                  # next AU races, best price per runner
+python examples/08_tip_tracker.py add RACE_ID 6         # log runner 6 at the best price now
+python examples/08_tip_tracker.py settle                # after the race
+```
+
+```
+Q Straight R12 Classic Boodie: took 3.20, closed 3.90 (CLV -17.9%), finished 1, profit +2.20 units
+
+1 settled: 0 beat the closing price, profit +2.20 units
+```
+
+`next` and `add` work on the free tier; `settle` reads the closing-line archive, which is Standard
+and above. [Get a free key](https://puntersedge.online/api?utm_source=demo&utm_medium=github&utm_campaign=tip-tracker#signup).
+A winner taken under its closing price is still negative CLV: over many tips, CLV says more about
+whether the prices you take are good than any single result does. It is a measuring tool, not a
+betting strategy.
 
 ## Credit budgeting, honestly
 
