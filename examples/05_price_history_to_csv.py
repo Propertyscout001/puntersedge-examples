@@ -42,7 +42,7 @@ def main():
 
     key = os.environ.get("PUNTERSEDGE_API_KEY")
     if not key:
-        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (1,500 credits/month, no card):\n  " + SIGNUP)
+        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (3,000 credits/month, no card):\n  " + SIGNUP)
 
     race_id = args.race_id
     if not race_id:

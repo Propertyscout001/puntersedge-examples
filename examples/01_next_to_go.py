@@ -1,10 +1,10 @@
 """Upcoming Australian races, soonest first, with the current favourite.
 
 Endpoint    GET /v1/racing/next-to-go        (2 credits per call, measured 2026-08-30)
-Free tier   1,500 credits/month  ->  ~750 calls, so hourly polling fits with room to spare.
+Free tier   3,000 credits/month  ->  ~1,500 calls, so hourly polling fits with room to spare.
 
 Works with NO KEY against the demo sandbox (3 races, truncated bookmaker lists).
-For the full feed, grab a free key (1,500 credits/month, no card) and export it:
+For the full feed, grab a free key (3,000 credits/month, no card) and export it:
 
     export PUNTERSEDGE_API_KEY=...
 

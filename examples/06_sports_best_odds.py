@@ -1,7 +1,7 @@
 """Best available head-to-head price per team for one sport (NRL by default).
 
 Endpoint    GET /v1/best-odds/{sport_key}    (3 credits per call, measured 2026-08-30)
-Free tier   1,500 credits/month  ->  ~500 calls.
+Free tier   3,000 credits/month  ->  ~1,000 calls.
 
 Works with NO KEY against the demo sandbox (truncated). The `arb_exists` flag is
 computed and served by the API — display it, don't recompute it locally. For a

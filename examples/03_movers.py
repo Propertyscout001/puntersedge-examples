@@ -1,7 +1,7 @@
 """Racing steamers and drifters — the biggest price moves before the jump.
 
 Endpoint    GET /v1/racing/movers            (3 credits per call, measured 2026-08-30)
-Free tier   1,500 credits/month  ->  ~500 calls.
+Free tier   3,000 credits/month  ->  ~1,000 calls.
 
 The API reports each mover's direction as `firming` (price shortening) or `drifting`
 (price easing). This lists the moves; it says nothing about whether following them
@@ -33,7 +33,7 @@ def main():
 
     key = os.environ.get("PUNTERSEDGE_API_KEY")
     if not key:
-        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (1,500 credits/month, no card):\n  " + SIGNUP)
+        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (3,000 credits/month, no card):\n  " + SIGNUP)
 
     params = {"limit": args.limit}
     if args.min_move is not None:

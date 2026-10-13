@@ -1,7 +1,7 @@
 """Best available win/place price per runner, across every covered bookmaker.
 
 Endpoint    GET /v1/racing/best-odds         (3 credits per call, measured 2026-08-30)
-Free tier   1,500 credits/month  ->  ~500 calls.
+Free tier   3,000 credits/month  ->  ~1,000 calls.
 
 `market_percentage` is the sum of implied probabilities at the best available prices,
 times 100. It describes how competitive the combined market is — nothing else.
@@ -21,7 +21,7 @@ def main():
     try:
         pe = PuntersEdge()
     except ApiKeyError:
-        sys.exit("No API key found. Free keys (1,500 credits/month, no card):\n  " + SIGNUP)
+        sys.exit("No API key found. Free keys (3,000 credits/month, no card):\n  " + SIGNUP)
 
     races = pe.racing_best_odds(num_races=3)
     for race in races:

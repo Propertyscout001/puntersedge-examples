@@ -1,7 +1,7 @@
 """Settled race results -> results.csv (one row per placed runner).
 
 Endpoint    GET /v1/racing/results           (2 credits per call, measured 2026-08-30)
-Free tier   1,500 credits/month  ->  ~750 calls; one call covers a whole day of results.
+Free tier   3,000 credits/month  ->  ~1,500 calls; one call covers a whole day of results.
 
 Usage:
     python 04_results_to_csv.py               # last 24h
@@ -29,7 +29,7 @@ def main():
 
     key = os.environ.get("PUNTERSEDGE_API_KEY")
     if not key:
-        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (1,500 credits/month, no card):\n  " + SIGNUP)
+        sys.exit("Set PUNTERSEDGE_API_KEY. Free keys (3,000 credits/month, no card):\n  " + SIGNUP)
 
     resp = requests.get(
         "https://api.puntersedge.online/v1/racing/results",
