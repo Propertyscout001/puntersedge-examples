@@ -7,7 +7,7 @@
 
 Seven small, runnable scripts against the [PuntersEdge Odds API](https://puntersedge.online/api?utm_source=github_examples&utm_medium=cookbook_readme):
 live win/place prices for Australian horse, greyhound and harness racing across
-[14 bookmakers, measured live](https://puntersedge.online/coverage-report.json),
+15 Australian bookmakers ([measured 19 Oct 2026; the live count is in coverage-report.json](https://puntersedge.online/coverage-report.json)),
 British and Irish racing bookmaker by bookmaker, plus head-to-head sports odds.
 
 Each script is standalone — read it top to bottom, run it, adapt it. No framework,
