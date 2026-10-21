@@ -1,0 +1,13 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE: fictional races and runners, invented prices. Not real data. Shape follows the two coverage endpoints (../contract/openapi-subset.json).",
+ "data": {
+  "closing_lines": {
+   "archive_from": "2026-08-04",
+   "archive_to": "2026-10-21",
+   "results_from": "2026-08-15"
+  },
+  "results": {
+   "coverage_from": "2026-08-15"
+  }
+ }
+}

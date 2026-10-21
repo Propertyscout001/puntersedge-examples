@@ -13,6 +13,20 @@ British and Irish racing bookmaker by bookmaker, plus head-to-head sports odds.
 Each script is standalone — read it top to bottom, run it, adapt it. No framework,
 no shared helpers, no magic.
 
+## Starter projects
+
+Three complete projects to build on, each with its own README, `.env.example`, tests, labelled
+synthetic fixtures, a usage estimate and the plan and licence it needs:
+
+| starter | what it is | stack |
+|---|---|---|
+| [odds-comparison-site](starters/odds-comparison-site) | a server-rendered odds comparison page: bookmaker grid, best price, freshness, one shared cache for every visitor, attribution | Node 18+, no dependencies |
+| [research-notebook](starters/research-notebook) | one day of closing prices joined to results on `race_id`, unmatched races and scratchings reported, price movement by finishing position | Python, Jupyter |
+| [results-tracker](starters/results-tracker) | follows races until results are final and the full field is in; each change reported once; webhook receiver | Python, `requests` |
+
+Field names in all three are checked against [`starters/contract/openapi-subset.json`](starters/contract/openapi-subset.json),
+a snapshot of the live schema (`python3 starters/contract/refresh.py` updates it).
+
 ## Run something in 30 seconds (no key needed)
 
 ```

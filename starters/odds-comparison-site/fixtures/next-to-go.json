@@ -1,0 +1,404 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE for tests and demo mode. Fictional runners and invented prices; not real odds. Shape follows GET /v1/racing/next-to-go (contract/openapi-subset.json); the real endpoint returns the bare array held in `races`.",
+ "races": [
+  {
+   "race_id": "fixture-race-1",
+   "source_id": null,
+   "venue": "Flemington",
+   "venue_id": null,
+   "venue_canonical": "Flemington",
+   "venue_site": null,
+   "race_number": 4,
+   "category": "horse",
+   "start_time": "2026-10-24T03:40:00Z",
+   "country": "AU",
+   "scratchings": [
+    {
+     "name": "Example Scratched",
+     "number": 7,
+     "barrier": 3,
+     "scratched_at": "2026-10-24T01:10:00Z"
+    }
+   ],
+   "runners": [
+    {
+     "name": "Fixture Alpha",
+     "number": 1,
+     "barrier": 1,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturealpha",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 3.6,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 3.8,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "ladbrokes_au",
+       "win_price": 3.8,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "pointsbetau",
+       "win_price": 3.5,
+       "place_price": null,
+       "age_seconds": 95,
+       "stale": true,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Bravo",
+     "number": 2,
+     "barrier": 2,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturebravo",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 5.0,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 4.8,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "ladbrokes_au",
+       "win_price": 5.2,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "pointsbetau",
+       "win_price": 5.0,
+       "place_price": null,
+       "age_seconds": 95,
+       "stale": true,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Charlie",
+     "number": 3,
+     "barrier": 3,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturecharlie",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 9.0,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 10.0,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "ladbrokes_au",
+       "win_price": null,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "pointsbetau",
+       "win_price": 9.5,
+       "place_price": null,
+       "age_seconds": 95,
+       "stale": true,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Delta",
+     "number": 4,
+     "barrier": 4,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturedelta",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": null,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": null,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    }
+   ],
+   "data_age_seconds": 95,
+   "freshest_age_seconds": 6,
+   "refresh_tier": "live",
+   "stale": true,
+   "stale_bookmakers": [
+    "pointsbetau"
+   ],
+   "cached": false,
+   "cache_age_seconds": 0
+  },
+  {
+   "race_id": "fixture-race-2",
+   "source_id": null,
+   "venue": "Sandown Park",
+   "venue_id": null,
+   "venue_canonical": "Sandown Park",
+   "venue_site": null,
+   "race_number": 6,
+   "category": "greyhound",
+   "start_time": "2026-10-24T08:12:00Z",
+   "country": "AU",
+   "scratchings": [],
+   "runners": [
+    {
+     "name": "Fixture Dog 1",
+     "number": 1,
+     "barrier": 1,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturedog1",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 2.9,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 3.1,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "betright",
+       "win_price": 2.8,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Dog 2",
+     "number": 2,
+     "barrier": 2,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturedog2",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 4.4,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 4.6000000000000005,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "betright",
+       "win_price": 4.300000000000001,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Dog 3",
+     "number": 3,
+     "barrier": 3,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturedog3",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 6.0,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 6.2,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "betright",
+       "win_price": 5.9,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Dog 4",
+     "number": 4,
+     "barrier": 4,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturedog4",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 8.5,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "sportsbet",
+       "win_price": 8.7,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      },
+      {
+       "key": "betright",
+       "win_price": 8.4,
+       "place_price": null,
+       "age_seconds": 8,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    }
+   ],
+   "data_age_seconds": 14,
+   "freshest_age_seconds": 5,
+   "refresh_tier": "live",
+   "stale": false,
+   "stale_bookmakers": [],
+   "cached": true,
+   "cache_age_seconds": 9
+  },
+  {
+   "race_id": "fixture-race-3",
+   "source_id": null,
+   "venue": "Menangle",
+   "venue_id": null,
+   "venue_canonical": "Menangle",
+   "venue_site": null,
+   "race_number": 2,
+   "category": "harness",
+   "start_time": "2026-10-24T09:05:00Z",
+   "country": "AU",
+   "scratchings": [],
+   "runners": [
+    {
+     "name": "Fixture Pacer",
+     "number": 1,
+     "barrier": 1,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturepacer",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 2.2,
+       "place_price": null,
+       "age_seconds": 1700,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    },
+    {
+     "name": "Fixture Trotter",
+     "number": 2,
+     "barrier": 2,
+     "jockey": null,
+     "trainer": null,
+     "horse_ref": "pe:fixturetrotter",
+     "bookmakers": [
+      {
+       "key": "tab",
+       "win_price": 3.1,
+       "place_price": null,
+       "age_seconds": 1700,
+       "stale": false,
+       "refresh_tier": "live"
+      }
+     ]
+    }
+   ],
+   "data_age_seconds": 1700,
+   "freshest_age_seconds": 1700,
+   "refresh_tier": "card",
+   "stale": false,
+   "stale_bookmakers": [],
+   "cached": false,
+   "cache_age_seconds": 0
+  }
+ ]
+}

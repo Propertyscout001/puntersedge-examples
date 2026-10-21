@@ -1,0 +1,568 @@
+{
+ "_about": "Subset of https://api.puntersedge.online/openapi.json read 2026-10-22 (API main 45c9ef6): for each endpoint the starters call, its query parameters and the response field names (top level, and one level down where the starters read nested objects). The contract tests check fixtures and parsers against this file. Refresh: python3 contract/refresh.py",
+ "info_version": "1.0.0",
+ "paths": {
+  "/v1/racing/next-to-go": {
+   "query": [
+    "bookmakers",
+    "categories",
+    "category",
+    "country",
+    "include_unresolved",
+    "limit",
+    "num_races",
+    "venue"
+   ],
+   "array": true,
+   "fields": [
+    "race_id",
+    "source_id",
+    "venue",
+    "venue_id",
+    "venue_canonical",
+    "venue_site",
+    "race_number",
+    "category",
+    "start_time",
+    "country",
+    "race_name",
+    "distance_m",
+    "track_condition",
+    "weather",
+    "places_paid",
+    "track_condition_changed_at",
+    "race_class",
+    "conditions",
+    "prize_total",
+    "rail",
+    "track_name",
+    "market_closed_at",
+    "inplay_at",
+    "market_state_source",
+    "scratchings",
+    "runners",
+    "data_age_seconds",
+    "freshest_age_seconds",
+    "refresh_tier",
+    "stale",
+    "stale_bookmakers",
+    "cached",
+    "cache_age_seconds"
+   ],
+   "nested": {
+    "scratchings": [
+     "barrier",
+     "name",
+     "number",
+     "scratched_at"
+    ],
+    "runners": [
+     "barrier",
+     "bookmakers",
+     "horse_ref",
+     "jockey",
+     "name",
+     "number",
+     "trainer"
+    ],
+    "runners[].bookmakers": [
+     "age_seconds",
+     "key",
+     "place_price",
+     "refresh_tier",
+     "source_url",
+     "stale",
+     "win_price"
+    ]
+   }
+  },
+  "/v1/racing/results": {
+   "query": [
+    "categories",
+    "category",
+    "country",
+    "date",
+    "hours_back",
+    "limit",
+    "offset",
+    "status",
+    "venue"
+   ],
+   "array": true,
+   "fields": [
+    "race_id",
+    "coverage_from",
+    "venue",
+    "venue_id",
+    "venue_canonical",
+    "venue_site",
+    "race_number",
+    "category",
+    "country",
+    "start_time",
+    "race_name",
+    "distance_m",
+    "track_condition",
+    "going",
+    "going_rating",
+    "weather",
+    "status",
+    "status_note",
+    "placings",
+    "runners",
+    "field_status",
+    "field_source",
+    "field_note",
+    "completeness",
+    "deductions",
+    "dividends",
+    "sectionals",
+    "resulted_at",
+    "market_closed_at",
+    "inplay_at",
+    "market_state_source"
+   ],
+   "nested": {
+    "placings": [
+     "horse_ref",
+     "name",
+     "number",
+     "place_price",
+     "position",
+     "sp",
+     "sp_note",
+     "win_price"
+    ],
+    "runners": [
+     "abnormal",
+     "box",
+     "dead_heat",
+     "horse_ref",
+     "jockey",
+     "margin",
+     "name",
+     "number",
+     "position",
+     "runner_ref",
+     "sp",
+     "sp_note",
+     "status",
+     "time_s",
+     "trainer"
+    ],
+    "deductions": [
+     "name",
+     "number",
+     "place",
+     "scratched_at",
+     "win"
+    ],
+    "dividends": [
+     "exotics",
+     "straight",
+     "straight_types"
+    ],
+    "completeness": [
+     "field_due_by",
+     "field_overdue",
+     "field_pending",
+     "last_successful_collection_at",
+     "overdue_since",
+     "result_final",
+     "result_source",
+     "retry_until",
+     "retrying",
+     "source_refused_since",
+     "state"
+    ]
+   },
+   "enums": {
+    "status": [
+     "interim",
+     "final",
+     "abandoned"
+    ],
+    "field_status": [
+     "complete",
+     "pending",
+     "overdue",
+     "unavailable",
+     "unsupported",
+     "not_applicable"
+    ],
+    "completeness.state": [
+     "provisional",
+     "final_placings",
+     "complete_full_field",
+     "not_run"
+    ]
+   }
+  },
+  "/v1/racing/results/coverage": {
+   "query": [
+    "days"
+   ],
+   "array": false,
+   "fields": [
+    "as_of",
+    "days",
+    "from_day",
+    "to_day",
+    "coverage_from",
+    "results_floors",
+    "field_floors",
+    "races",
+    "complete",
+    "pending",
+    "overdue",
+    "unavailable",
+    "unsupported",
+    "not_applicable",
+    "collectable",
+    "complete_pct",
+    "supported_complete_pct",
+    "by_category",
+    "by_day",
+    "venues_incomplete",
+    "venues_incomplete_truncated",
+    "field_scope",
+    "archive_races_in_window",
+    "archive_races_without_result",
+    "archive_races_result_unlinked",
+    "result_completeness",
+    "field_sources_refused"
+   ],
+   "nested": {
+    "by_category": [
+     "category",
+     "complete",
+     "country",
+     "field_source",
+     "not_applicable",
+     "overdue",
+     "pending",
+     "races",
+     "unavailable",
+     "unsupported"
+    ],
+    "by_day": [
+     "category",
+     "complete",
+     "country",
+     "day",
+     "field_source",
+     "not_applicable",
+     "overdue",
+     "pending",
+     "races",
+     "unavailable",
+     "unsupported"
+    ],
+    "venues_incomplete": [
+     "category",
+     "complete",
+     "country",
+     "day",
+     "not_applicable",
+     "overdue",
+     "pending",
+     "races",
+     "settled",
+     "unavailable",
+     "unsupported",
+     "venue",
+     "venue_id"
+    ]
+   }
+  },
+  "/v1/racing/closing-lines": {
+   "query": [
+    "bookmakers",
+    "categories",
+    "category",
+    "closing_only",
+    "country",
+    "date",
+    "format",
+    "from",
+    "include_flagged",
+    "include_scratched",
+    "limit",
+    "offset",
+    "race_id",
+    "race_number",
+    "resulted_only",
+    "to",
+    "venue"
+   ],
+   "array": false,
+   "fields": [
+    "rows_returned",
+    "total_rows",
+    "limit",
+    "offset",
+    "archive_from",
+    "window_days",
+    "resulted_rows",
+    "rows"
+   ],
+   "nested": {
+    "rows": [
+     "bookmaker_key",
+     "books_in_consensus_close",
+     "books_in_consensus_open",
+     "category",
+     "close_lay_price",
+     "close_place_price",
+     "close_secs_to_jump",
+     "close_top2_price",
+     "close_top3_price",
+     "close_top4_price",
+     "close_win_price",
+     "consensus_close_price",
+     "consensus_close_prob",
+     "consensus_open_price",
+     "country",
+     "finish_position",
+     "horse_ref",
+     "is_closing_line",
+     "meeting_date_aet",
+     "name_fragment_suspect",
+     "open_is_baseline",
+     "open_place_price",
+     "open_secs_to_jump",
+     "open_top2_price",
+     "open_top3_price",
+     "open_top4_price",
+     "open_win_price",
+     "points_observed",
+     "race_id",
+     "race_number",
+     "result_status",
+     "runner_key",
+     "runner_name",
+     "runner_number",
+     "runner_ref",
+     "scratched",
+     "scratched_at",
+     "start_time",
+     "venue",
+     "venue_id",
+     "venue_site",
+     "venue_split_peer_race_id",
+     "venue_split_suspect"
+    ]
+   }
+  },
+  "/v1/racing/closing-lines/coverage": {
+   "query": [
+    "days"
+   ],
+   "array": false,
+   "fields": [
+    "archive_from",
+    "archive_to",
+    "rows",
+    "races",
+    "bookmakers",
+    "is_closing_line_pct",
+    "open_is_baseline_pct",
+    "resulted_races_pct",
+    "results_from",
+    "settleable_races",
+    "settleable_resulted_pct",
+    "results_scope",
+    "venue_split_suspect_rows",
+    "name_fragment_suspect_rows",
+    "scratched_rows",
+    "duplicate_suspect_rows",
+    "backtest_ready_rows",
+    "backtest_ready_pct",
+    "closing_by_period",
+    "consensus_close_pct",
+    "finish_position_pct",
+    "by_category",
+    "window_days",
+    "window_from",
+    "by_bookmaker",
+    "settleable_races_in_window",
+    "races_without_result",
+    "races_result_unlinked",
+    "results_in_window",
+    "results_without_race",
+    "definitions"
+   ],
+   "nested": {
+    "by_category": [
+     "category",
+     "finish_position_pct",
+     "races",
+     "resulted_races",
+     "rows"
+    ],
+    "by_bookmaker": [
+     "baseline_pct",
+     "bookmaker_key",
+     "closing_pct",
+     "rows"
+    ],
+    "definitions": [
+     "baseline_pct",
+     "closing_pct",
+     "races_without_result",
+     "results_without_race"
+    ]
+   }
+  },
+  "/v1/racing/price-history": {
+   "query": [
+    "bookmakers",
+    "date",
+    "include_points",
+    "max_points",
+    "race_id",
+    "race_number",
+    "venue"
+   ],
+   "array": false,
+   "fields": [
+    "race_id",
+    "venue",
+    "venue_id",
+    "venue_canonical",
+    "venue_site",
+    "race_number",
+    "category",
+    "country",
+    "start_time",
+    "points_returned",
+    "truncated",
+    "history_from",
+    "runners"
+   ],
+   "nested": {
+    "runners": [
+     "bookmakers",
+     "name",
+     "number"
+    ],
+    "runners[].bookmakers": [
+     "close_price",
+     "close_secs_to_jump",
+     "high",
+     "key",
+     "low",
+     "move_pct",
+     "open_is_baseline",
+     "open_price",
+     "open_secs_to_jump",
+     "points",
+     "points_count"
+    ]
+   }
+  },
+  "/v1/racing/events": {
+   "query": [
+    "categories",
+    "category",
+    "country",
+    "date",
+    "hours_ahead",
+    "include_unresolved"
+   ],
+   "array": true,
+   "fields": [
+    "race_id",
+    "venue",
+    "venue_id",
+    "venue_canonical",
+    "venue_site",
+    "race_number",
+    "category",
+    "start_time",
+    "country",
+    "race_name",
+    "distance_m",
+    "track_condition",
+    "weather",
+    "race_class",
+    "conditions",
+    "prize_total",
+    "rail",
+    "track_name",
+    "track_condition_changed_at",
+    "status",
+    "scratchings",
+    "market_status",
+    "inplay",
+    "market_closed_at",
+    "inplay_at",
+    "market_state_source"
+   ],
+   "nested": {
+    "scratchings": [
+     "barrier",
+     "name",
+     "number",
+     "scratched_at"
+    ]
+   }
+  },
+  "/v1/demo/racing/next-to-go": {
+   "query": [],
+   "array": false,
+   "fields": [
+    "cached",
+    "demo",
+    "note",
+    "races",
+    "shape",
+    "signup_url"
+   ],
+   "nested": {
+    "races": [
+     "category",
+     "country",
+     "race_id",
+     "race_number",
+     "runners",
+     "start_time",
+     "venue"
+    ],
+    "races[].runners": [
+     "bookmakers",
+     "name",
+     "number"
+    ]
+   }
+  }
+ },
+ "webhook_race_result": {
+  "headers": [
+   "X-PuntersEdge-Id",
+   "Idempotency-Key",
+   "X-PuntersEdge-Timestamp",
+   "X-PuntersEdge-Attempt",
+   "X-PuntersEdge-Signature",
+   "X-Webhook-Signature"
+  ],
+  "signature": "X-PuntersEdge-Signature: t=<unix seconds>,v1=<hex HMAC-SHA256 of '<t>.<raw body>'>; refuse t more than 300 s from now",
+  "fields": [
+   "event",
+   "event_id",
+   "race_id",
+   "result_id",
+   "venue",
+   "race_number",
+   "start_time",
+   "country",
+   "category",
+   "sport",
+   "status",
+   "placings",
+   "source",
+   "sent_at",
+   "dividends"
+  ]
+ }
+}

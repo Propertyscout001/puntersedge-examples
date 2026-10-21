@@ -1,0 +1,265 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE: invented meeting, races and runners; not real results. Shape follows GET /v1/racing/results (poll 5 of a meeting in progress) (../contract/openapi-subset.json).",
+ "data": [
+  {
+   "race_id": "fx-r1",
+   "coverage_from": "2026-08-15",
+   "venue": "Fixture Park",
+   "venue_id": null,
+   "venue_canonical": "Fixture Park",
+   "venue_site": null,
+   "race_number": 1,
+   "category": "greyhound",
+   "country": "AU",
+   "start_time": "2026-10-24T08:00:00Z",
+   "status": "final",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 3,
+     "name": "Fixture Dog 3",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 2,
+     "number": 1,
+     "name": "Fixture Dog 1",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 3,
+     "number": 5,
+     "name": "Fixture Dog 5",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": [
+    {
+     "number": 3,
+     "box": 3,
+     "name": "Fixture Dog 3",
+     "position": 1,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    },
+    {
+     "number": 1,
+     "box": 1,
+     "name": "Fixture Dog 1",
+     "position": 2,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    },
+    {
+     "number": 5,
+     "box": 5,
+     "name": "Fixture Dog 5",
+     "position": 3,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    },
+    {
+     "number": 2,
+     "box": 2,
+     "name": "Fixture Dog 2",
+     "position": 4,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    },
+    {
+     "number": 4,
+     "box": 4,
+     "name": "Fixture Dog 4",
+     "position": 5,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    },
+    {
+     "number": 6,
+     "box": 6,
+     "name": "Fixture Dog 6",
+     "position": 6,
+     "status": "ran",
+     "abnormal": null,
+     "margin": null,
+     "time_s": null,
+     "dead_heat": false
+    }
+   ],
+   "field_status": "complete",
+   "field_source": "fasttrack",
+   "field_note": null,
+   "completeness": {
+    "state": "complete_full_field",
+    "result_final": true,
+    "result_source": "betright",
+    "field_pending": false,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": false,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [
+     {
+      "position": 1,
+      "number": 3,
+      "name": "Fixture Dog 3",
+      "market": "WIN",
+      "product": "FIXED",
+      "amount": 4.2
+     }
+    ],
+    "exotics": [
+     {
+      "type": "Quinella",
+      "code": "QN",
+      "selection": "3,1",
+      "product": "VIC",
+      "amount": 9.8
+     }
+    ]
+   },
+   "resulted_at": "2026-10-24T08:00:00Z"
+  },
+  {
+   "race_id": "fx-r2",
+   "coverage_from": "2026-08-15",
+   "venue": "Fixture Park",
+   "venue_id": null,
+   "venue_canonical": "Fixture Park",
+   "venue_site": null,
+   "race_number": 2,
+   "category": "greyhound",
+   "country": "AU",
+   "start_time": "2026-10-24T08:20:00Z",
+   "status": "final",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 2,
+     "name": "Fixture Dog 2",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 2,
+     "number": 6,
+     "name": "Fixture Dog 6",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 3,
+     "number": 1,
+     "name": "Fixture Dog 1",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": null,
+   "field_status": "unavailable",
+   "field_source": "fasttrack",
+   "field_note": null,
+   "completeness": {
+    "state": "final_placings",
+    "result_final": true,
+    "result_source": "betright",
+    "field_pending": false,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": false,
+    "retry_until": null,
+    "source_refused_since": "2026-10-13T10:35:05Z",
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-24T08:20:00Z"
+  },
+  {
+   "race_id": "fx-r3",
+   "coverage_from": "2026-08-15",
+   "venue": "Fixture Park",
+   "venue_id": null,
+   "venue_canonical": "Fixture Park",
+   "venue_site": null,
+   "race_number": 3,
+   "category": "greyhound",
+   "country": "AU",
+   "start_time": "2026-10-24T08:40:00Z",
+   "status": "abandoned",
+   "status_note": null,
+   "placings": [],
+   "runners": null,
+   "field_status": "not_applicable",
+   "field_source": null,
+   "field_note": null,
+   "completeness": {
+    "state": "not_run",
+    "result_final": false,
+    "result_source": "betright",
+    "field_pending": false,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": false,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-24T08:40:00Z"
+  }
+ ]
+}

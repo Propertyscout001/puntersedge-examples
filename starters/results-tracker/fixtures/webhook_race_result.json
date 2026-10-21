@@ -1,0 +1,39 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE: invented meeting, races and runners; not real results. Shape follows a race.result webhook body (../contract/openapi-subset.json).",
+ "data": {
+  "event": "race.result",
+  "event_id": "00000000-fixture-0001",
+  "race_id": "fx-r1",
+  "result_id": 1,
+  "venue": "Fixture Park",
+  "race_number": 1,
+  "start_time": "2026-10-24T08:00:00Z",
+  "country": "AU",
+  "category": "greyhound",
+  "sport": "racing_greyhound",
+  "status": "final",
+  "placings": [
+   {
+    "position": 1,
+    "name": "Fixture Dog 3",
+    "number": 3,
+    "horse_ref": null
+   }
+  ],
+  "source": "betright",
+  "sent_at": "2026-10-24T08:31:00Z",
+  "dividends": {
+   "straight": [
+    {
+     "position": 1,
+     "number": 3,
+     "name": "Fixture Dog 3",
+     "market": "WIN",
+     "product": "FIXED",
+     "amount": 4.2
+    }
+   ],
+   "exotics": []
+  }
+ }
+}

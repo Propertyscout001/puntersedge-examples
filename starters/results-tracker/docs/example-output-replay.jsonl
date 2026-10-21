@@ -1,0 +1,14 @@
+{"kind": "note", "text": "REPLAY of synthetic fixtures: invented races, not real results."}
+{"kind": "tracking", "races": 3, "date": "2026-10-24", "venue": "Fixture Park"}
+{"race_id": "fx-r1", "kind": "result_interim", "placings": [{"position": 1, "number": 3}, {"position": 2, "number": 1}, {"position": 3, "number": 5}]}
+{"race_id": "fx-r3", "kind": "race_not_run", "status": "abandoned"}
+{"race_id": "fx-r1", "kind": "result_final", "placings": [{"position": 1, "number": 3}, {"position": 2, "number": 1}, {"position": 3, "number": 5}]}
+{"race_id": "fx-r1", "kind": "dividends_declared"}
+{"race_id": "fx-r2", "kind": "result_final", "placings": [{"position": 1, "number": 2}, {"position": 2, "number": 6}, {"position": 3, "number": 1}]}
+{"race_id": "fx-r2", "kind": "field_source_unavailable", "since": "2026-10-13T10:35:05Z"}
+{"kind": "result_without_race_id", "venue": "Fixture Park", "race_number": 4, "start_time": "2026-10-24T09:00:00Z", "status": "final"}
+{"race_id": "fx-r1", "kind": "exotics_declared"}
+{"race_id": "fx-r1", "kind": "full_field_complete"}
+{"race_id": "fx-r2", "kind": "full_field_not_coming", "field_status": "unavailable"}
+{"kind": "done", "polls": 5}
+{"kind": "usage", "requests": 6, "credits": 0}

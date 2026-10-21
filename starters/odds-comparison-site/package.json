@@ -1,0 +1,14 @@
+{
+  "name": "puntersedge-odds-comparison-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starter: a server-rendered racing odds comparison page on the PuntersEdge API. One shared cache for every visitor; the key never reaches the browser.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.mjs",
+    "demo": "PE_FIXTURES=1 node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}

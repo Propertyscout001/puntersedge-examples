@@ -1,0 +1,310 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE: fictional races and runners, invented prices. Not real data. Shape follows GET /v1/racing/results (../contract/openapi-subset.json).",
+ "data": [
+  {
+   "race_id": "fx-A",
+   "coverage_from": "2026-08-15",
+   "venue": "Randwick",
+   "venue_id": null,
+   "venue_canonical": "Randwick",
+   "venue_site": null,
+   "race_number": 1,
+   "category": "horse",
+   "country": "AU",
+   "start_time": "2026-10-21T02:30:00Z",
+   "status": "final",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 2,
+     "name": "Fixture Dancer",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 2,
+     "number": 1,
+     "name": "Fixture Comet",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 3,
+     "number": 4,
+     "name": "Fixture Flint",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": [
+    {
+     "number": 2,
+     "name": "Fixture Dancer",
+     "position": 1,
+     "status": "ran"
+    },
+    {
+     "number": 1,
+     "name": "Fixture Comet",
+     "position": 2,
+     "status": "ran"
+    },
+    {
+     "number": 4,
+     "name": "Fixture Flint",
+     "position": 3,
+     "status": "ran"
+    },
+    {
+     "number": 3,
+     "name": "Fixture Ember",
+     "position": 4,
+     "status": "ran"
+    },
+    {
+     "number": 5,
+     "name": "Fixture Gone",
+     "position": null,
+     "status": "scratched"
+    }
+   ],
+   "field_status": "complete",
+   "field_source": "racing_australia",
+   "field_note": null,
+   "completeness": {
+    "state": "complete_full_field",
+    "result_final": true,
+    "result_source": "betright",
+    "field_pending": false,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": false,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-21T02:30:00Z"
+  },
+  {
+   "race_id": "fx-B",
+   "coverage_from": "2026-08-15",
+   "venue": "Randwick",
+   "venue_id": null,
+   "venue_canonical": "Randwick",
+   "venue_site": null,
+   "race_number": 2,
+   "category": "horse",
+   "country": "AU",
+   "start_time": "2026-10-21T03:05:00Z",
+   "status": "final",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 1,
+     "name": "Fixture Harbour",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 2,
+     "number": 2,
+     "name": "Fixture Island",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    },
+    {
+     "position": 3,
+     "number": 3,
+     "name": "Fixture Jasper",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": null,
+   "field_status": "pending",
+   "field_source": null,
+   "field_note": null,
+   "completeness": {
+    "state": "final_placings",
+    "result_final": true,
+    "result_source": "betright",
+    "field_pending": true,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": true,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-21T03:05:00Z"
+  },
+  {
+   "race_id": "fx-C-twin",
+   "coverage_from": "2026-08-15",
+   "venue": "Randwick",
+   "venue_id": null,
+   "venue_canonical": "Randwick",
+   "venue_site": null,
+   "race_number": 3,
+   "category": "horse",
+   "country": "AU",
+   "start_time": "2026-10-21T03:40:00Z",
+   "status": "final",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 2,
+     "name": "Fixture Mesa",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": null,
+   "field_status": "pending",
+   "field_source": null,
+   "field_note": null,
+   "completeness": {
+    "state": "final_placings",
+    "result_final": true,
+    "result_source": "betright",
+    "field_pending": true,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": true,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-21T03:40:00Z"
+  },
+  {
+   "race_id": "fx-D",
+   "coverage_from": "2026-08-15",
+   "venue": "Randwick",
+   "venue_id": null,
+   "venue_canonical": "Randwick",
+   "venue_site": null,
+   "race_number": 4,
+   "category": "horse",
+   "country": "AU",
+   "start_time": "2026-10-21T04:15:00Z",
+   "status": "interim",
+   "status_note": null,
+   "placings": [
+    {
+     "position": 1,
+     "number": 1,
+     "name": "Fixture Nova",
+     "win_price": null,
+     "place_price": null,
+     "sp": null,
+     "sp_note": null,
+     "horse_ref": null
+    }
+   ],
+   "runners": null,
+   "field_status": "pending",
+   "field_source": null,
+   "field_note": null,
+   "completeness": {
+    "state": "provisional",
+    "result_final": false,
+    "result_source": "betright",
+    "field_pending": true,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": true,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-21T04:15:00Z"
+  },
+  {
+   "race_id": "fx-E",
+   "coverage_from": "2026-08-15",
+   "venue": "Doomben",
+   "venue_id": null,
+   "venue_canonical": "Doomben",
+   "venue_site": null,
+   "race_number": 1,
+   "category": "horse",
+   "country": "AU",
+   "start_time": "2026-10-21T02:00:00Z",
+   "status": "abandoned",
+   "status_note": null,
+   "placings": [],
+   "runners": null,
+   "field_status": "not_applicable",
+   "field_source": null,
+   "field_note": null,
+   "completeness": {
+    "state": "not_run",
+    "result_final": false,
+    "result_source": "betright",
+    "field_pending": false,
+    "field_overdue": false,
+    "field_due_by": null,
+    "overdue_since": null,
+    "retrying": false,
+    "retry_until": null,
+    "source_refused_since": null,
+    "last_successful_collection_at": null
+   },
+   "deductions": [],
+   "dividends": {
+    "straight": [],
+    "exotics": []
+   },
+   "resulted_at": "2026-10-21T02:00:00Z"
+  }
+ ]
+}

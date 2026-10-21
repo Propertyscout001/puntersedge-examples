@@ -1,0 +1,4 @@
+{
+ "_fixture": "SYNTHETIC FIXTURE: invented meeting, races and runners; not real results. Shape follows GET /v1/racing/results (poll 1 of a meeting in progress) (../contract/openapi-subset.json).",
+ "data": []
+}

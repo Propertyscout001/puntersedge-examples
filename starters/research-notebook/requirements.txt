@@ -1,0 +1,6 @@
+# Runtime (the notebook and pe_research)
+requests>=2.31
+pandas>=2.0
+matplotlib>=3.7
+# Running the notebook
+jupyterlab>=4.0
