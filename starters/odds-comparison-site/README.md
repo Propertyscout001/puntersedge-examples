@@ -9,6 +9,10 @@ visitor ──> this server ──> one shared board (refreshed at most every PE
                              only while someone is looking) ──> GET /v1/racing/next-to-go
 ```
 
+![The page in fixture mode: synthetic prices, not real odds](docs/screenshot-fixture.png)
+
+*Fixture mode: synthetic runners and invented prices.*
+
 The API key lives in this server's environment. It is never sent to the browser, put in a URL or
 written to a log.
 
