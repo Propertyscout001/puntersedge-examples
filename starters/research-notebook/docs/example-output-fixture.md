@@ -37,9 +37,6 @@ print("Mode:", "FIXTURES (synthetic data, not real races)" if USE_FIXTURES else 
     Mode: FIXTURES (synthetic data, not real races) | date 2026-10-21 | country AU | category horse
 
 
-    /private/tmp/claude-501/-Users-hamish/e689edf7-aa78-47ee-b06a-d175d4ad91e1/scratchpad/ob/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
-      warnings.warn(
-
 
 ## 1. What the archive covers
 
